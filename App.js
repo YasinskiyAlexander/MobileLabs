@@ -11,22 +11,23 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
     return (
-        <NavigationContainer>
-            <View style={styles.container}>
-                {/*<StatusBar style="auto"/>*/}
-                    <View style={styles.header}>
-                        <Image
-                            source={{uri: 'https://ztu.edu.ua/img/logo/university-colored.png'}}
-                            style={styles.logo}
-                        />
-                        <Text style={styles.appName}>Ясінський Олександр ІПЗк-22-1</Text>
-                    </View>
+        <View style={styles.container}>
+            <StatusBar style='dark' backgroundColor='white' translucent={false}/>
+            <View style={styles.header}>
+                <Image
+                    source={{uri: 'https://ztu.edu.ua/img/logo/university-colored.png'}}
+                    style={styles.logo}
+                />
+                <Text style={styles.appName}>Ясінський Олександр ІПЗк-22-1</Text>
+            </View>
 
-                <View style={styles.main}>
+            <View style={styles.main}>
+                <NavigationContainer>
                     <Tab.Navigator screenOptions={{
                         tabBarActiveTintColor: '#0048ff',
                         tabBarInactiveTintColor: 'gray',
                         headerShown: false,
+                        tabBarScrollEnabled: true,
                         // tabBarShowLabel: false,
                     }}>
                         <Tab.Screen name="Головна" component={HomeScreen} options={{
@@ -45,31 +46,30 @@ export default function App() {
                             )
                         }}/>
                     </Tab.Navigator>
-                </View>
+                </NavigationContainer>
             </View>
-        </NavigationContainer>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        paddingHorizontal: 8,
         flex: 1,
         backgroundColor: '#fff',
     },
-    // headerContainer: {
-    //
-    // },
     header: {
-        height: 40,
+        // height: 40,
+        paddingHorizontal: 8,
         marginVertical: 8,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
     },
     logo: {
-        height: 32,
-        width: 140
+        height: 27,
+        width: 90,
+        paddingTop: 8,
+        paddingBottom: 4,
     },
     appName: {
         fontSize: 16,
