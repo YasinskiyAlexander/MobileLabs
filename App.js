@@ -27,8 +27,7 @@ export default function App() {
                         tabBarActiveTintColor: '#0048ff',
                         tabBarInactiveTintColor: 'gray',
                         headerShown: false,
-                        tabBarScrollEnabled: true,
-                        // tabBarShowLabel: false,
+                        tabBarHideOnKeyboard: true,
                     }}>
                         <Tab.Screen name="Головна" component={HomeScreen} options={{
                             tabBarIcon: ({color, size}) => (
@@ -58,7 +57,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     header: {
-        // height: 40,
         paddingHorizontal: 8,
         marginVertical: 8,
         flexDirection: "row",

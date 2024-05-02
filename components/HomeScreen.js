@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image, Button, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 import {useEffect, useState} from "react";
 import axios from "axios";
 
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     title: {
         textAlign: "center",
         fontWeight: "500",
-        fontSize: 20,
+        fontSize: 24,
     },
     newsContainer: {
         marginTop: 10
@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
         fontSize: 12,
     },
     newsDescription: {
-        // color: "#5b5b5b",
         fontSize: 14,
     },
 });
